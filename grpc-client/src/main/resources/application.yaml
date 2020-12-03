@@ -1,0 +1,16 @@
+server:
+  port: 8080
+spring:
+  application:
+    name: cloud-grpc-client
+  sleuth:
+    sampler:
+      probability: 1
+
+grpc:
+  client:
+    appuser-grpc-server:
+      enableKeepAlive: true
+      keepAliveWithoutCalls: true
+      negotiationType: plaintext
+      address: 'static://127.0.0.1:9010'
